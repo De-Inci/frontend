@@ -1,0 +1,51 @@
+/* Centering the form container */
+.mainContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Styling the form container */
+.signin-form {
+    background-color: #0f0e0e87;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 120px rgba(0, 0, 0, 0.5);
+    width: 350px;
+    padding-top: 60px;
+}
+
+/* Form input fields styling */
+.signin-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+/* Submit button styling */
+.signin-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #9600f3;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Error message styling */
+.signin-form p {
+    color: #ff4d4d;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
