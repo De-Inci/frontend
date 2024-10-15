@@ -5,13 +5,18 @@ import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import "./styles/Navbar.css";
 import { useUser } from '@/lib/context/user';
+// import { useRouter } from 'next/router';
+
 
 function NavbarComponent() {
+  // const router = useRouter();
   const user = useUser();
 
   const handleClick = () => {
-    window.href("/login")
-  } 
+    // router.push('/auth/login');
+    window.location.href = '/auth/login'
+  }
+
   return (
     <div className='navbar-div'>
       {['lg'].map((expand) => (
@@ -36,7 +41,7 @@ function NavbarComponent() {
                   <Nav.Link href="#action1">Pricing</Nav.Link>
                   <Nav.Link href="#action2">Testimonials</Nav.Link>
                 </Nav>
-                <Button className='login-btn'>Login</Button>
+                <Button className='login-btn' onClick={handleClick}>Login</Button>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
           </Container>

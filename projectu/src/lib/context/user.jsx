@@ -1,7 +1,7 @@
+"use client";
 import { ID } from "appwrite";
 import { createContext, useContext, useEffect, useState } from "react";
 import { account } from "../appwrite";
-import { useNavigate } from "react-router-dom";
 
 const UserContext = createContext();
 
@@ -11,13 +11,12 @@ export function useUser() {
 
 export function UserProvider(props) {
   const [user, setUser] = useState(null);
-  const navigate = useNavigate();
 
   async function login(email, password) {
     try{
       const loggedIn = await account.createEmailPasswordSession(email, password);
       alert("login success")
-      navigate("/ideas")
+      window.location.href = '/dashboard'
     }catch (error){
       alert(error)
     }
@@ -26,7 +25,6 @@ export function UserProvider(props) {
 
   async function logout() {
     await account.deleteSession("current");
-    navigate("/")
     setUser(null);
   }
 
@@ -34,7 +32,6 @@ export function UserProvider(props) {
     try{
       await account.create(ID.unique(), email, password);
       await login(email, password);
-      navigate("/ideas")
     } catch(error){
       alert(error)
     }
@@ -43,7 +40,9 @@ export function UserProvider(props) {
   async function init() {
     try {
       const loggedIn = await account.get();
-      setUser(loggedIn);
+      if (loggedIn){
+        setUser(loggedIn);
+      }
     } catch (err) {
       setUser(null);
       // alert(err)
