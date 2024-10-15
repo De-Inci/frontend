@@ -1,0 +1,50 @@
+/* Testimonials Section Styling */
+.testimonials-section {
+    padding: 40px 0;
+  }
+  
+  h2 {
+    margin-bottom: 30px;
+    font-weight: 700;
+  }
+  
+  .testimonial-box {
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    font-size: 1.1rem;
+  }
+  
+  .testimonial-box p {
+    margin: 0;
+    line-height: 1.5;
+  }
+  
+  .testimonial-name {
+    margin-top: 15px;
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+  /* Colors for Each Box */
+  .green-box {
+    background-color: #ccffcc;
+  }
+  
+  .purple-box {
+    background-color: #e3b6ff;
+  }
+  
+  .blue-box {
+    background-color: #add8e6;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .testimonial-box {
+      font-size: 1rem;
+    }
+  }
+  

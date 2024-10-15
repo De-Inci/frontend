@@ -1,14 +1,20 @@
-export default function Home() {
-  return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100vh",
-      }}
-    >
-      <h3>Welcome to Incident Management Portal</h3>
+"use client";
+import React from "react";
+import NavbarComponent from "@/components/NavbarComponent";
+import Banner from "@/components/Banner";
+import Destinations from "@/components/Destinations";
+import Features from "@/components/Features";
+import Testimonials from "@/components/Testimonials";
+
+export default function App() {
+
+  return(
+    <div>
+      <NavbarComponent />
+      <Banner />
+      <Destinations />
+      <Features />
+      <Testimonials />
     </div>
-  );
+  )
 }

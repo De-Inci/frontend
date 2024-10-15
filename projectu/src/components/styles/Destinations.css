@@ -1,0 +1,89 @@
+.destinations-section {
+    padding: 60px 0;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  .get-app-btn {
+    background-color: #32e178 !important;
+    border-color: #32e178 !important;
+    margin-right: 15px !important;
+    font-size: 1.1rem !important;
+    padding: 10px 25px;
+  }
+  
+  .section-subtitle {
+    font-size: 1.1rem;
+    margin-top: 10px;
+  }
+  
+  .discover-link {
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+  
+  .discover-link .arrow {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .destination-card {
+    background-color: white;
+    border-radius: 25px;
+    overflow: hidden;
+    padding: 10px;
+    text-align: left;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .destination-image {
+    width: 100%;
+    border-radius: 15px;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .try-now-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: white;
+    border-radius: 30px;
+    padding: 5px 15px;
+    font-size: 0.9rem;
+    border: none;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+  }
+  
+  .destination-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+  
+  .destination-description {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 2rem;
+    }
+  
+    .discover-link {
+      text-align: center;
+      margin-top: 20px;
+    }
+  
+    .destination-card {
+      margin-bottom: 30px;
+    }
+  }
+  

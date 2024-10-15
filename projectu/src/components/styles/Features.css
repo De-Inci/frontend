@@ -1,0 +1,110 @@
+/* Overall Section Styling */
+.chat-options-section {
+    padding: 40px 0;
+  }
+  
+  /* Chat Section (Mobile Frame) */
+  .mobile-frame {
+    width: 100%;
+    max-width: 350px;
+    height: 700px;
+    border-radius: 40px;
+    border: 2px solid #ddd;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .chat-header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  .chat-body {
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  .message.received {
+    background-color: #e0f7e0;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+  
+  .message.received .time {
+    display: block;
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 5px;
+    text-align: right;
+  }
+  
+  .message-image img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+  
+  /* Options Section */
+  .options-section {
+    padding-left: 40px;
+  }
+  
+  .option {
+    display: flex;
+    align-items: center;
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .option-icon {
+    font-size: 2rem;
+    margin-right: 20px;
+  }
+  
+  .option-text {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  
+  .highlighted-option {
+    background-color: black;
+    color: white;
+  }
+  
+  .highlighted-option .option-description {
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: #ddd;
+    margin-top: 10px;
+  }
+  
+  .option:hover {
+    background-color: #d1d1d1;
+  }
+  
+  @media (max-width: 768px) {
+    .mobile-frame {
+      max-width: 300px;
+    }
+    
+    .options-section {
+      padding-left: 0;
+      margin-top: 30px;
+    }
+    
+    .option-text {
+      font-size: 1rem;
+    }
+  }
+  
