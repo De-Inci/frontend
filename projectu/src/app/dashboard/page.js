@@ -16,7 +16,7 @@ export const Dashboard = () => {
                 setUser(currentUser);
             } catch (error) {
                 console.error('User not logged in:', error);
-                router.push('/auth/signin'); // Redirect to SignIn if not logged in
+                router.push('/login');
             }
         };
 
@@ -26,7 +26,7 @@ export const Dashboard = () => {
     const handleLogout = async () => {
         try {
             await account.deleteSession('current'); // Logout the user
-            router.push('/auth/signin'); // Redirect to SignIn page
+            router.push('/login'); // Redirect to SignIn page
         } catch (error) {
             console.error('Logout failed:', error);
         }

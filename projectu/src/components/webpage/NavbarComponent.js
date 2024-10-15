@@ -24,7 +24,7 @@ export default function NavBar() {
         <li><a href="#features">Features</a></li>
         <li><a href="#pricing">Pricing</a></li>
         <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#login">Login</a></li>
+        <li><a href="/register">Register</a></li>
       </ul>
     </nav>
   );

@@ -1,6 +1,7 @@
 'use client'
 import React from 'react';
 import './Home.css';
+import Footer from "@/Components/webpage/FooterComponent"
 
 export default function Home() {
 	return (<>
@@ -45,6 +46,7 @@ export default function Home() {
 				</div>
 			</section>
 		</div>
+		<Footer/>
 	</>
 	);
 }
