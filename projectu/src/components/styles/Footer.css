@@ -1,0 +1,51 @@
+.subscription-section {
+    background-color: #181818;
+  }
+  
+  .table {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  th, td {
+    padding: 16px;
+  }
+  
+  .table th {
+    font-weight: 600;
+    background-color: #262626;
+  }
+  
+  .table td {
+    background-color: #1c1c1c;
+  }
+  
+  .store-button {
+    width: 100px;
+    height: 50px;
+  }
+  
+  .store-button:hover {
+    opacity: 0.85;
+  }
+  
+  .footer h2, h3 {
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .footer p {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .table th button {
+    background-color: transparent;
+    border: 2px solid transparent;
+    padding: 5px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+  }
+  .table th button:hover {
+    border-color: #fff;
+    color: #fff;
+  }

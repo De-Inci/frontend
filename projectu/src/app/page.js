@@ -5,16 +5,20 @@ import Banner from "@/components/Banner";
 import Destinations from "@/components/Destinations";
 import Features from "@/components/Features";
 import Testimonials from "@/components/Testimonials";
+import Footer from "@/components/Footer";
+import { UserProvider } from "@/lib/context/user";
 
 export default function App() {
-
-  return(
+  return (
     <div>
-      <NavbarComponent />
-      <Banner />
-      <Destinations />
-      <Features />
-      <Testimonials />
+      <UserProvider>
+        <NavbarComponent />
+        <Banner />
+        <Destinations />
+        <Features />
+        <Testimonials />
+        <Footer />
+      </UserProvider>
     </div>
-  )
+  );
 }

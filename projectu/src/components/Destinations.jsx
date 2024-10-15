@@ -10,7 +10,7 @@ const Destinations = () => {
     <section className="destinations-section">
       <div className="container">
         {/* Section Heading */}
-        <h2 className="section-title">Different destinations</h2>
+        <h2 className="section-title">Different Destinations</h2>
         <div className="row">
           <div className="col-lg-4">
             <p className="section-subtitle">
