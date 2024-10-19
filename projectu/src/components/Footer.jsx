@@ -1,10 +1,10 @@
 // components/SubscriptionPlans.js
-import React from "react";
-import "./styles/Footer.css";
-import Image from "next/image";
-import img from "./footer.png";
-import appstore from "./appstore.png";
-import playstore from "./playstore.png";
+import React from 'react';
+import './styles/Footer.css';
+import Image from 'next/image';
+import img from './footer.png';
+import appstore from './appstore.png';
+import playstore from './playstore.png';
 
 const Footer = () => {
   return (
@@ -16,9 +16,15 @@ const Footer = () => {
             <thead>
               <tr>
                 <th>Subscription Level</th>
-                <th><button style={{backgroundColor : "green"}}>Basic</button></th>
-                <th><button style={{backgroundColor : "purple"}}>Advanced</button></th>
-                <th><button style={{backgroundColor : "yellow"}}>Premium</button></th>
+                <th>
+                  <button style={{backgroundColor: 'green'}}>Basic</button>
+                </th>
+                <th>
+                  <button style={{backgroundColor: 'green'}}>Advanced</button>
+                </th>
+                <th>
+                  <button style={{backgroundColor: 'green'}}>Premium</button>
+                </th>
               </tr>
             </thead>
             <tbody>
@@ -63,9 +69,9 @@ const Footer = () => {
         </div>
         <div className="mt-5">
           <h3>Try it right now</h3>
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div style={{display: 'flex', justifyContent: 'space-between'}}>
             <div>
-              <p style={{maxWidth: "450px"}}>
+              <p style={{maxWidth: '450px'}}>
                 Download the AI Ally on the Appstore and Google Play and
                 discover the world of artificial intelligence!
               </p>
@@ -83,11 +89,11 @@ const Footer = () => {
               </div>
             </div>
             <div>
-            <Image
-                  src={img}
-                  alt="Get it on Google Play"
+              <Image
+                src={img}
+                alt="Get it on Google Play"
                 //   className="store-button mx-2"
-                />
+              />
             </div>
           </div>
         </div>
