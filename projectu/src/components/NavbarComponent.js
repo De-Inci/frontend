@@ -4,18 +4,20 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import "./styles/Navbar.css";
-import { useUser } from '@/lib/context/user';
+import { useUser } from '@/lib/context/user'; // assuming the user context provides user information
 // import { useRouter } from 'next/router';
-
 
 function NavbarComponent() {
   // const router = useRouter();
-  const user = useUser();
+  const { user, logout } = useUser();  // Assuming 'logout' function is available in user context
 
-  const handleClick = () => {
-    // router.push('/auth/login');
-    window.location.href = '/auth/login'
-  }
+  const handleLoginLogoutClick = () => {
+    if (user) {
+      logout();  // Call logout function when user is logged in
+    } else {
+      window.location.href = '/auth/login'; // Redirect to login page when user is not logged in
+    }
+  };
 
   return (
     <div className='navbar-div'>
@@ -41,7 +43,9 @@ function NavbarComponent() {
                   <Nav.Link href="#action1">Pricing</Nav.Link>
                   <Nav.Link href="#action2">Testimonials</Nav.Link>
                 </Nav>
-                <Button className='login-btn' onClick={handleClick}>Login</Button>
+                <Button className='login-btn' onClick={handleLoginLogoutClick}>
+                  {user ? 'Logout' : 'Login'}
+                </Button>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
           </Container>
