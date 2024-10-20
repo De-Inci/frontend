@@ -1,0 +1,23 @@
+.button {
+  background-color: rgb(
+    72,
+    223,
+    42
+  ) !important; /* Correct syntax for !important */
+  border-radius: 25px !important; /* Corrected radius property */
+  padding: 5px 40px !important;
+}
+
+/* Make sure nav links are spaced evenly */
+.nav-link {
+  margin: 0 40px; /* Adjust as needed for equal spacing */
+}
+/* HeaderComponent.css */
+
+/* Fixed at the top */
+.fixed-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}

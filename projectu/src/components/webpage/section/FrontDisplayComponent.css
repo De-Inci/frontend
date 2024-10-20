@@ -1,0 +1,14 @@
+.buttonGet {
+  background-color: rgb(
+    59,
+    168,
+    32
+  ) !important; /* Correct syntax for !important */
+  border-radius: 25px !important; /* Corrected radius property */
+  padding: 5px 40px !important;
+}
+
+.buttonget {
+  border-radius: 25px !important; /* Corrected radius property */
+  padding: 5px 40px !important;
+}
