@@ -1,8 +1,9 @@
 'use client';
 
 import React from "react";
-import { useRouter } from 'next/navigation';
+import { useRouter }  from 'next/navigation';
 import { useUser } from '../../lib/context/user';
+import '../dashboard/dashboard.css';
 
 export default function Dashboard() {
     const user = useUser();
@@ -13,15 +14,10 @@ export default function Dashboard() {
         router.push("/");
     };
 
-    if (!user.current) {
-        router.push("/");
-        return null; 
-    }
-
     return (
         <>
-            <center><h2>I am dashboard</h2></center>
-            <button className="logout-btn" onClick={handleLogout}>Logout</button>
+            <center><h2>I am dashboard</h2>
+            <button className="logout-btn" onClick={handleLogout}>Logout</button></center>
         </>
     );
 }

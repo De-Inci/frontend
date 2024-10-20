@@ -4,18 +4,17 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import "./styles/Navbar.css";
-import { useUser } from '@/lib/context/user'; // assuming the user context provides user information
-// import { useRouter } from 'next/router';
+import { useUser } from '@/lib/context/user';
 
 function NavbarComponent() {
-  // const router = useRouter();
-  const { user, logout } = useUser();  // Assuming 'logout' function is available in user context
+  const { user, logout } = useUser();
 
   const handleLoginLogoutClick = () => {
     if (user) {
-      logout();  // Call logout function when user is logged in
+      user.logout();
+      window.location.replace("/");
     } else {
-      window.location.href = '/auth/login'; // Redirect to login page when user is not logged in
+      window.location.href = '/auth/login';
     }
   };
 

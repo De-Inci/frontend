@@ -8,6 +8,10 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const handleLogin = async () => {
+     await user.login(email, password);
+    window.location.href = '/dashboard/';
+  };
   
   return (
     <section className="login-container">
@@ -35,10 +39,13 @@ export default function Login() {
           <button
             className="login-button"
             type="button"
-            onClick={() => user.login(email, password)}
+            onClick={handleLogin}
           >
             Login
           </button>
+          <p className="login-register-text">
+            If new, register <a href="/auth/register" className="login-register-link">here</a>
+          </p>
         </div>
       </form>
     </section>

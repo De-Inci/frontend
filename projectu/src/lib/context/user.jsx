@@ -1,60 +1,62 @@
-"use client";
-import { ID } from "appwrite";
-import { createContext, useContext, useEffect, useState } from "react";
-import { account } from "../appwrite";
+'use client';
+import {ID} from 'appwrite';
+import {createContext, useContext, useEffect, useState} from 'react';
+import {account} from '../appwrite';
 
-const UserContext = createContext();
+const UserContext = createContext ();
 
-export function useUser() {
-  return useContext(UserContext);
+export function useUser () {
+  return useContext (UserContext);
 }
 
-export function UserProvider(props) {
-  const [user, setUser] = useState(null);
+export function UserProvider (props) {
+  const [user, setUser] = useState (null);
 
-  async function login(email, password) {
-    try{
-      const loggedIn = await account.createEmailPasswordSession(email, password);
-      alert("login success")
-      window.location.href = '/dashboard'
-    }catch (error){
-      alert(error)
-    }
-    setUser(loggedIn);
-  }
-
-  async function logout() {
-    await account.deleteSession("current");
-    setUser(null);
-  }
-
-  async function register(email, password) {
-    try{
-      await account.create(ID.unique(), email, password);
-      await login(email, password);
-    } catch(error){
-      alert(error)
-    }
-  }
-
-  async function init() {
+  async function login (email, password) {
     try {
-      const loggedIn = await account.get();
-      if (loggedIn){
-        setUser(loggedIn);
+      const loggedIn = await account.createEmailPasswordSession (
+        email,
+        password
+      );
+      alert ('login success');
+      setUser (loggedIn);
+    } catch (error) {
+      alert (error);
+    }
+  }
+
+  async function logout () {
+    await account.deleteSession ('current');
+    setUser (null);
+  }
+
+  async function register (email, password) {
+    try {
+      await account.create (ID.unique (), email, password);
+      await login (email, password);
+    } catch (error) {
+      alert (error);
+    }
+  }
+
+  async function init () {
+    try {
+      const loggedIn = await account.get ();
+      if (loggedIn) {
+        setUser (loggedIn);
       }
     } catch (err) {
-      setUser(null);
+      setUser (null);
       // alert(err)
     }
   }
 
-  useEffect(() => {
-    init();
+  useEffect (() => {
+    init ();
   }, []);
 
   return (
-    <UserContext.Provider value={{ current: user, login, logout, register }}>
+    <UserContext.Provider value={{current: user, login, logout, register}}>
       {props.children}
     </UserContext.Provider>
   );
