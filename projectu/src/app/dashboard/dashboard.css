@@ -1,15 +1,90 @@
+/* Overall dashboard layout */
+.dashboard-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem 2rem;
+  background-color: #2563eb;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 1rem;
+}
 
 .logout-btn {
-    background-color: #32e178;
-    border-color: #32e178;
-    padding: 5px 25px;
-    font-size: 1.1rem;
-    border-radius: 25px;
-    margin-top: 50px;
-  }
-  
+  padding: 0.5rem 1rem;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  color: #2563eb;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
 .logout-btn:hover {
-    background-color: #2bc168;
-    border-color: #2bc168;
-  }
-  
+  background-color: #e0e7ff;
+  color: #1d4ed8;
+}
+
+.dashboard-content {
+  padding: 2rem;
+}
+
+/* Sections */
+.intro-section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.stats-section {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+}
+
+.stats h3 {
+  font-size: 2rem;
+  color: #2563eb;
+}
+
+.applications-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.applications-section ul li {
+  margin-bottom: 1rem;
+}
+
+.testimonials-section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.subscription-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+
+.subscription-table th, .subscription-table td {
+  padding: 1rem;
+  border: 1px solid #e5e7eb;
+  text-align: center;
+}
+
+.download-section {
+  text-align: center;
+}
