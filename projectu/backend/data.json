@@ -1,0 +1,42 @@
+[
+  {
+    "id": "9",
+    "first_name": "De",
+    "last_name": "Cranstoun",
+    "MathMarks": 2,
+    "ScienceMark": 82,
+    "EnglishMark": 89,
+    "HindiMark": 65,
+    "SocialSciencMark": 47
+  },
+  {
+    "id": "10",
+    "first_name": "Bruis",
+    "last_name": "Iredale",
+    "MathMarks": 17,
+    "ScienceMark": 81,
+    "EnglishMark": 67,
+    "HindiMark": 7,
+    "SocialSciencMark": 63
+  },
+  {
+    "id": "1730799979215",
+    "first_name": "lkasnda",
+    "last_name": "kjasd",
+    "MathMarks": "123",
+    "ScienceMark": "232",
+    "EnglishMark": "35",
+    "HindiMark": "23",
+    "SocialSciencMark": "23"
+  },
+  {
+    "id": "1730800139524",
+    "first_name": "Shravba",
+    "last_name": "dsf",
+    "MathMarks": "23",
+    "ScienceMark": "23",
+    "EnglishMark": "23",
+    "HindiMark": "32",
+    "SocialSciencMark": "43"
+  }
+]
